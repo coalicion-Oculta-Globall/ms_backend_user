@@ -13,7 +13,7 @@ export const verifyToken = async(req, res, next) => {
             process.env.TOKEN_PRIVATEKEY
         );
         next();
-    } catch (e) {
-        error(req, res, 401, e)
+    } catch (err) {
+        error(req, res, 401, err)
     }
 }
